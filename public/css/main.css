@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+[ng-drag] {
+    width: 100px;
+    height: 100px;
+    background: rgba(255,0,0, 0.5);
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: move;
+}
+
+[ng-drop] {
+    width: 500px;
+    height: 500px;
+    background: rgba(0,255,0, 0.5);
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: move;
+}

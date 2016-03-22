@@ -1,16 +1,21 @@
-<div>
-<p>HELLO MY NAME IS JACK</p>
-</div>
+<!-- <div>
+		<p>HELLO MY NAME IS JACK</p>
+	</div> -->
 
 
-<div ng-repeat="tyler in draggables" ng-drag="true" ng-drag-data="tyler" ng-drag-success="onDragComplete($data,$evt)" ng-center-anchor="true">
-  {{tyler}}
-</div>
+	<div  ng-drag="true" ng-drag-success="onDragComplete($data,$evt)" ng-drag-data="tyler" ng-center-anchor="true" ng-repeat="tyler in draggables track by $index" >
+	   DRAG THIS STUFF AWAY, DAWG
+	</div>
 
-<div>NOTHING TO SEE HERE, MOVE ALONG</div>
 
-<div  ng-drop="true" ng-drop-success="onDropComplete($data,$evt)" >
-   DROP STUFF HERE, DAWG
-  <div ng-repeat="tyler in dropped track by $index">{{tyler}}</div>
-</div>
-  {{test}}
+
+<!-- <div>NOTHING TO SEE HERE, MOVE ALONG</div> -->
+
+	<div ng-drop="true" ng-drop-success="onDropComplete($data,$evt)" >
+	    DROP STUFF HERE, DAWG
+		<div ng-repeat="tyler in dropped track by $index"></div>
+
+		<div ng-repeat="tyler in dropped track by $index" ng-drag="true" ng-drag-data="tyler" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="true" class="ng-binding ng-scope" draggable="false">
+		three
+		</div>
+	</div>
